@@ -13,10 +13,10 @@ function SimpleCounter(props) {
 			<div className="clock">
 				<i className="far fa-clock"></i>
 			</div>
-			<div className="four">{props.digitFour}</div>
-			<div className="three">{props.digitThree}</div>
-			<div className="two">{props.digitThree}</div>
-			<div className="one">{props.digitOne}</div>
+			<div className="four">{props.digitFour % 10}</div>
+			<div className="three">{props.digitThree % 10}</div>
+			<div className="two">{props.digitTwo % 10}</div>
+			<div className="one">{props.digitOne % 10}</div>
 		</div>
 	);
 }
@@ -39,7 +39,7 @@ setInterval(function () {
 	ReactDOM.render(
 		<SimpleCounter
 			digitOne={one}
-			digiTwo={two}
+			digitTwo={two}
 			digitThree={three}
 			digitFour={four}
 		/>,
